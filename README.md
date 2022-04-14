@@ -9,5 +9,5 @@ A CLI tool to bundle all files found in an fxmanifest.lua file into a zip file, 
 
 
 # Building from source
-- You have to the [Rust toolchain](https://rustup.rs/) installed 
+- You have to have the [Rust toolchain](https://rustup.rs/) installed 
 - In the `spacker` directory, run `cargo build --release`
