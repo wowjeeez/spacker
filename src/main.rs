@@ -29,7 +29,7 @@ fn main() {
     } else {
         println!("{}", "No fxmanifest.lua file was found, looking in the current directory...".yellow());
         let mut dir = std::env::current_dir().unwrap();
-        dir.push("../wow/fxmanifest.lua");
+        dir.push("fxmanifest.lua");
         load_manifest_in(dir);
     }
     let duration = start.elapsed();
