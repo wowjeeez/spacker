@@ -2,6 +2,7 @@ use std::io::Write;
 use std::path::PathBuf;
 use glob::{glob_with, MatchOptions};
 use colored::Colorize;
+use itertools::Itertools;
 use crate::utils::{get_dirs, pretty_path};
 
 pub fn gather_files_in(mut in_dir: PathBuf, inp_files: Vec<String>) -> Vec<PathBuf> {
@@ -41,7 +42,8 @@ pub fn gather_files_in(mut in_dir: PathBuf, inp_files: Vec<String>) -> Vec<PathB
     files
 }
 
-pub fn create_zip(files: Vec<PathBuf>, root: PathBuf) -> PathBuf {
+pub fn create_zip(mut files: Vec<PathBuf>, root: PathBuf) -> PathBuf {
+    files = files.into_iter().unique().collect();
     let zip_path = PathBuf::from("resource.zip");
     let entry = std::fs::File::create(&zip_path).unwrap();
     let mut zip = zip::ZipWriter::new(entry);
