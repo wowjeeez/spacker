@@ -64,7 +64,7 @@ _G = setmetatable(_G, {
             populate_lua_tbl(&mut tbl, vec!["shared_script", "shared_scripts", "client_script",
                                                     "client_scripts", "server_script", "server_scripts",
                                                     "ui_page", "files", "data_files", "data_file",
-                                                    "file", "loadscreen", "before_level_meta", "after_level_meta", "replace_level_meta"]);
+                                                    "file", "loadscreen", "before_level_meta", "after_level_meta", "replace_level_meta", "spacker_keep"]);
             cx.globals().set("__COLLECTORS", tbl).unwrap();
             extractor.call::<_, ()>(()).unwrap();
         });
