@@ -9,7 +9,7 @@ A CLI tool to bundle all files found in an fxmanifest.lua file into a zip file, 
 
 
 # Adding files to the archive, without including them in the Cfx runtime
-- Spacker exposes a custom directive called `spacker_keep`, which will add the files included in the manifest
+- Spacker exposes a custom directive called `spacker_keep`, which will add the files to the archive.
 - Example:
 ```lua
  fx_version 'cerulean'
