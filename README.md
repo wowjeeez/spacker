@@ -20,7 +20,7 @@ A CLI tool to bundle all files found in an fxmanifest.lua file into a zip file, 
 
 --snip--
  spacker_keep { --this won't affect your cfx runtime, but will include the files in the archive
-     "typedefs/anpr.lua",
+     "typedefs/types.lua",
  }
 ```
 
