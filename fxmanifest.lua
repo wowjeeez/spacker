@@ -23,6 +23,7 @@ files {
     'config.json',
     'resources/html/index.html',
     'resources/html/**/*',
+    'test/image.webp'
 }
 
 dependency {

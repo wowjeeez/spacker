@@ -59,9 +59,9 @@ pub fn create_zip(mut files: Vec<PathBuf>, root: PathBuf) -> PathBuf {
             }
         }
         println!("{}", format!("Adding {} to the archive", pretty_path(&file)).yellow());
-        let file_str = std::fs::read_to_string(&file).unwrap();
+        let file_vec = std::fs::read(&file).unwrap();
         zip.start_file(file.to_str().unwrap(), Default::default()).unwrap();
-        zip.write_all(file_str.as_bytes()).unwrap();
+        zip.write_all(&*file_vec).unwrap();
     }
     zip_path
 }
